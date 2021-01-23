@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   B.hpp                                              :+:      :+:    :+:   */
+/*   StripMiner.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/22 21:24:03 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/22 21:33:58 by lsuardi          ###   ########.fr       */
+/*   Created: 2021/01/23 19:05:04 by lsuardi           #+#    #+#             */
+/*   Updated: 2021/01/23 19:06:32 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef B_HPP
-# define B_HPP
+#include "StripMiner.hpp"
 
-# include "A.hpp"
-
-class A;
-
-class B
+void StripMiner::mine(IAsteroid * target)
 {
-	public:
-
-	B(void) { }
-	~B(void) { }
-
-	void interactA(A & a) { /* Do something with A */ }
-};
-
-#endif
+	if (target)
+		std::cout << "* strip mining... got " << target->beMined(this) << " *" << std::endl;
+}

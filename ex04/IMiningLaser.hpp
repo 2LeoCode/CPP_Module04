@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   IMiningLaser.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/22 18:37:18 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/22 21:32:14 by lsuardi          ###   ########.fr       */
+/*   Created: 2021/01/23 17:53:10 by lsuardi           #+#    #+#             */
+/*   Updated: 2021/01/23 18:56:26 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef IMININGLASER_HPP
+# define IMININGLASER_HPP
 
-#include "A.hpp"
-#include "B.hpp"
+# include <iostream>
+# include "IAsteroid.hpp"
 
-int main(void)
+class IAsteroid;
+
+class IMiningLaser
 {
-	A newA;
-	B newB;
+	public:
 
-	newB.interactA(newA);
-	newA.interactB(newB);
-	return (0);
-}
+	virtual ~IMiningLaser() { }
+	virtual void mine(IAsteroid *) = 0;
+};
+
+# include "DeepCoreMiner.hpp"
+# include "StripMiner.hpp"
+
+#endif

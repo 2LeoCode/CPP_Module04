@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A.hpp                                              :+:      :+:    :+:   */
+/*   DeepCoreMiner.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/22 21:21:14 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/22 21:34:04 by lsuardi          ###   ########.fr       */
+/*   Created: 2021/01/23 17:57:55 by lsuardi           #+#    #+#             */
+/*   Updated: 2021/01/23 19:04:10 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef A_HPP
-# define A_HPP
+#ifndef DEEPCOREMINER_HPP
+# define DEEPCOREMINER_HPP
 
-# include "B.hpp"
+# include "IMiningLaser.hpp"
+# include "IAsteroid.hpp"
 
-class B;
-
-class A
+class DeepCoreMiner : public IMiningLaser
 {
 	public:
 
-	A(void) { }
-	~A(void) { }
+	DeepCoreMiner(void) { }
+	virtual ~DeepCoreMiner(void) { }
 
-	void interactB(B & b) { /* Do something with B */ }
+	virtual void mine(IAsteroid *);
 };
 
 #endif
