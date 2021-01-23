@@ -6,7 +6,7 @@
 /*   By: lsuardi <lsuardi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/23 18:18:30 by lsuardi           #+#    #+#             */
-/*   Updated: 2021/01/23 18:54:47 by lsuardi          ###   ########.fr       */
+/*   Updated: 2021/01/23 19:16:36 by lsuardi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Comet : public IAsteroid
 
 	virtual inline std::string beMined(DeepCoreMiner *) const { return ("Meium"); }
 	virtual inline std::string beMined(StripMiner *) const { return ("Tartarite"); }
-	virtual inline std::string getName() const { return (_name); }
+	virtual inline std::string getName(void) const { return (_name); }
 
 
 	private:
